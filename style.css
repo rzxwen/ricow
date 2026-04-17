@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  background: linear-gradient(135deg, #dbeafe, #eef2ff, #e0f2fe);
+  min-height: 100vh;
+}
+
+.background-blur {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.7), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255,255,255,0.5), transparent 30%);
+}
+
+.desktop-layout {
+  width: min(1100px, 92vw);
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.window {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.hero-window {
+  grid-column: 1 / -1;
+}
+
+.window-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #ff5f57;
+}
+
+.yellow {
+  background: #febc2e;
+}
+
+.green {
+  background: #28c840;
+}
+
+.window-title {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.window-content {
+  padding: 1.3rem;
+}
+
+.window-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.window-content h2 {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.main-button,
+.secondary-button {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.main-button {
+  background: #111827;
+  color: white;
+}
+
+.secondary-button {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.08);
+  color: #111827;
+}
+
+.main-button:hover,
+.secondary-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+section a {
+  color: #2563eb;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  min-height: 220px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: block;
+}
+
+.vis-window h2 {
+  margin-bottom: 0.4rem;
+}
+
+.vis-window p {
+  margin-top: 0;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  .button-row {
+    flex-direction: column;
+  }
+
+  .main-button,
+  .secondary-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .desktop-layout {
+    width: min(94vw, 1100px);
+  }
+}

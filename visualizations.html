@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-blur"></div>
+
+  <main class="desktop-layout">
+    <section class="window hero-window">
+      <div class="window-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="window-title">Visualization Portfolio</span>
+      </div>
+      <div class="window-content">
+        <h1>SVG Visualizations</h1>
+        <p class="subtitle">
+          This page contains a simple SVG bar chart and a small SVG landscape,
+          both created with JavaScript.
+        </p>
+
+        <div class="button-row">
+          <a href="index.html" class="main-button">Back to Home</a>
+          <a href="https://github.com/rzxwen" class="secondary-button" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="window vis-window">
+      <div class="window-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="window-title">Bar Chart</span>
+      </div>
+      <div class="window-content">
+        <h2>Skill Levels</h2>
+        <p>A simple SVG bar chart showing some of my technical strengths.</p>
+        <svg id="chart" viewBox="0 0 420 260" aria-label="Bar chart of skills"></svg>
+      </div>
+    </section>
+
+    <section class="window vis-window">
+      <div class="window-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="window-title">SVG Art</span>
+      </div>
+      <div class="window-content">
+        <h2>Simple Landscape</h2>
+        <p>A small scene built from basic SVG shapes using JavaScript.</p>
+        <svg id="art" viewBox="0 0 420 240" aria-label="Simple landscape art"></svg>
+      </div>
+    </section>
+  </main>
+
+  <script src="vis.js"></script>
+</body>
+</html>
